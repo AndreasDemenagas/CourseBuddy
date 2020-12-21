@@ -16,6 +16,9 @@
 		F57F85A025915CC8003624E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F859F25915CC8003624E8 /* Constants.swift */; };
 		F57F85A525915F8A003624E8 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F85A425915F8A003624E8 /* CoursesViewController.swift */; };
 		F57F85AA25916035003624E8 /* Extension_LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F85A925916035003624E8 /* Extension_LayoutAnchors.swift */; };
+		F57F85B3259164F1003624E8 /* CourseBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F85B2259164F1003624E8 /* CourseBank.swift */; };
+		F57F85B625916922003624E8 /* AddCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F85B525916922003624E8 /* AddCourseView.swift */; };
+		F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F85B825916992003624E8 /* AddCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F57F859F25915CC8003624E8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F57F85A425915F8A003624E8 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		F57F85A925916035003624E8 /* Extension_LayoutAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension_LayoutAnchors.swift; sourceTree = "<group>"; };
+		F57F85B2259164F1003624E8 /* CourseBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBank.swift; sourceTree = "<group>"; };
+		F57F85B525916922003624E8 /* AddCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseView.swift; sourceTree = "<group>"; };
+		F57F85B825916992003624E8 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 				F57F858125915A30003624E8 /* SceneDelegate.swift */,
 				F57F859A25915AF4003624E8 /* MainTabBarController.swift */,
 				F57F85A325915F77003624E8 /* Courses */,
+				F57F85AC25916455003624E8 /* Models */,
 				F57F859E25915CB6003624E8 /* Constants */,
 				F57F85A825916024003624E8 /* Helpers */,
 				F57F858B25915A31003624E8 /* Assets.xcassets */,
@@ -88,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				F57F85A425915F8A003624E8 /* CoursesViewController.swift */,
+				F57F85B825916992003624E8 /* AddCourseViewController.swift */,
+				F57F85B525916922003624E8 /* AddCourseView.swift */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -98,6 +107,14 @@
 				F57F85A925916035003624E8 /* Extension_LayoutAnchors.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F57F85AC25916455003624E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F57F85B2259164F1003624E8 /* CourseBank.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,13 +186,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57F85B3259164F1003624E8 /* CourseBank.swift in Sources */,
 				F57F85A025915CC8003624E8 /* Constants.swift in Sources */,
 				F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */,
 				F57F858025915A30003624E8 /* AppDelegate.swift in Sources */,
 				F57F85AA25916035003624E8 /* Extension_LayoutAnchors.swift in Sources */,
 				F57F859B25915AF4003624E8 /* MainTabBarController.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
+				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
 				F57F85A525915F8A003624E8 /* CoursesViewController.swift in Sources */,
+				F57F85B625916922003624E8 /* AddCourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

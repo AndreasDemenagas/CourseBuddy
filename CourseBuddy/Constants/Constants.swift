@@ -15,6 +15,8 @@ struct Constants {
         static let calendarTabBar = "calendar"
         static let groupsTabBar = "person.3.fill"
         static let casTabBar = "pencil.and.outline"
+        
+        static let addCourse = "plus.circle.fill"
     }
     
     struct Colors {

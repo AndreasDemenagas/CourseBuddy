@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class CoursesViewController: UICollectionViewController {
     
@@ -21,14 +22,22 @@ class CoursesViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBar()
         collectionView.backgroundColor = .white
         collectionView.addSubview(noCourseLabel)
         noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let y = -scrollView.contentOffset.y
-        noCourseLabel.transform = CGAffineTransform(translationX: 0, y: y)
+    private func setupNavigationBar() {
+        let addCourseNavigationItem = UIBarButtonItem(image: UIImage(systemName: Constants.Images.addCourse), style: .plain, target: self, action: #selector(handleAddCourse))
+        addCourseNavigationItem.tintColor = Constants.Colors.mainGreen
+        navigationItem.rightBarButtonItem = addCourseNavigationItem
+    }
+    
+    @objc private func handleAddCourse() {
+        let controller = AddCourseController(rootView: AddCourseView())
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
     }
     
 }
