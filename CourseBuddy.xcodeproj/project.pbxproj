@@ -33,6 +33,7 @@
 		F5A2613225925148000B514B /* AssessmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613125925148000B514B /* AssessmentRow.swift */; };
 		F5A2613725925F7B000B514B /* AddAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613625925F7B000B514B /* AddAssessmentView.swift */; };
 		F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613D2592AC96000B514B /* AddTaskView.swift */; };
+		F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261402592B0E7000B514B /* Task+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		F5A2613125925148000B514B /* AssessmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentRow.swift; sourceTree = "<group>"; };
 		F5A2613625925F7B000B514B /* AddAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssessmentView.swift; sourceTree = "<group>"; };
 		F5A2613D2592AC96000B514B /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		F5A261402592B0E7000B514B /* Task+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +145,9 @@
 		F57F85AC25916455003624E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F5A261432592B1B3000B514B /* CoreData Models */,
 				F57F85B2259164F1003624E8 /* CourseBank.swift */,
 				F5A2611625922BFF000B514B /* CourseModels.swift */,
-				F5A26113259223B6000B514B /* Course+Ext.swift */,
-				F5A2612B259249FF000B514B /* Assessment+Ext.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +198,16 @@
 				F5A2613D2592AC96000B514B /* AddTaskView.swift */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		F5A261432592B1B3000B514B /* CoreData Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5A261402592B0E7000B514B /* Task+Ext.swift */,
+				F5A2612B259249FF000B514B /* Assessment+Ext.swift */,
+				F5A26113259223B6000B514B /* Course+Ext.swift */,
+			);
+			path = "CoreData Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				F5A2610B25921C2E000B514B /* CoreDataManager.swift in Sources */,
 				F5A2611B25923182000B514B /* CourseLevelCellView.swift in Sources */,
 				F57F859B25915AF4003624E8 /* MainTabBarController.swift in Sources */,
+				F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */,
 				F5A2612F25924CB4000B514B /* AssessmentsView.swift in Sources */,
 				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,

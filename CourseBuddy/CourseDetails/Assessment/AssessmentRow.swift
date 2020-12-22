@@ -15,7 +15,7 @@ struct AssessmentRow: View {
             VStack(alignment: .leading, spacing: 6) {
                 Text(assessment.name!)
                     .bold()
-                Text("\(assessment.heighting)%")
+                Text("\(assessment.weighting)%")
             }
             Spacer()
             if assessment.assessmentGradingType == .externalAssessment {

@@ -2,9 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Assessment" representedClassName="Assessment" syncable="YES" codeGenerationType="class">
         <attribute name="gradingType" optional="YES" attributeType="String"/>
-        <attribute name="heighting" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="paperType" optional="YES" attributeType="String"/>
+        <attribute name="weighting" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assessments" inverseEntity="Course"/>
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
@@ -12,9 +12,18 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="year" optional="YES" attributeType="String"/>
         <relationship name="assessments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assessment" inverseName="course" inverseEntity="Assessment"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseTask" inverseName="course" inverseEntity="CourseTask"/>
+    </entity>
+    <entity name="CourseTask" representedClassName="CourseTask" syncable="YES" codeGenerationType="class">
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDeliverable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="priority" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="tasks" inverseEntity="Course"/>
     </entity>
     <elements>
-        <element name="Course" positionX="-418.366455078125" positionY="70.18507385253906" width="128" height="103"/>
-        <element name="Assessment" positionX="-107.0570068359375" positionY="235.8602905273438" width="128" height="118"/>
+        <element name="Assessment" positionX="19.2303466796875" positionY="223.1250000000001" width="128" height="118"/>
+        <element name="Course" positionX="-82.11224365234375" positionY="-58.76004028320312" width="128" height="118"/>
+        <element name="CourseTask" positionX="-252" positionY="207" width="128" height="118"/>
     </elements>
 </model>

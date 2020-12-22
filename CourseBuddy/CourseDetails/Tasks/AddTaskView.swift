@@ -11,6 +11,8 @@ struct AddTaskView: View {
     
     @Binding var isPresented: Bool
     
+    @Binding var course: Course
+    
     var body: some View {
         NavigationView {
             Text("AAAA")

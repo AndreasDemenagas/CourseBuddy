@@ -73,9 +73,6 @@ struct AddAssessmentView: View {
                 print("Error ", error )
             case .success(let course):
                 completion(course)
-                for a in course.assessments?.allObjects as? [Assessment] ?? [] {
-                    print(a.name)
-                }
             }
         }
     }

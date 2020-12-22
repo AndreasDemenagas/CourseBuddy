@@ -45,7 +45,7 @@ class CoreDataManager {
         
         assessment.course = course
         assessment.name = name
-        assessment.heighting = Int32(weighting) ?? 0
+        assessment.weighting = Int32(weighting) ?? 0
         
         assessment.gradingType = gradingType.rawValue
         assessment.assessmentGradingType = gradingType
