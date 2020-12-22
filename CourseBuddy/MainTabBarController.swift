@@ -17,7 +17,8 @@ class MainTabBarController: UITabBarController {
         tabBar.barStyle = .black
         tabBar.isTranslucent = false
         
-        let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewCompositionalLayout.list(using: .init(appearance: .grouped)))
+        //let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewCompositionalLayout.list(using: .init(appearance: .grouped)))
+        let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let coursesController = navigationController(viewController: courseCollectionViewController, imageName: Constants.Images.coursesTabBar, title: "Courses")
         let deadlinesController = navigationController(viewController: UIViewController(), imageName: Constants.Images.calendarTabBar, title: "Deadlines")
         let casController = navigationController(viewController: UIViewController(), imageName: Constants.Images.casTabBar, title: "CAS")

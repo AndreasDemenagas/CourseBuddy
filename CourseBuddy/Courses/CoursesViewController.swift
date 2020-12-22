@@ -37,13 +37,12 @@ class CoursesViewController: UICollectionViewController {
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
         collectionView.addSubview(noCourseLabel)
+        collectionView.register(CourseListCell.self, forCellWithReuseIdentifier: CourseListCell.id)
         
-        let registration = UICollectionView.CellRegistration<CourseListCell, Course> { (cell, indexPath, course) in
+        dataSource = UICollectionViewDiffableDataSource<Section, Course>(collectionView: collectionView) { (collectionView, indexPath, course) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseListCell.id, for: indexPath) as! CourseListCell
             cell.course = course
-        }
-        
-        dataSource = UICollectionViewDiffableDataSource<Section, Course>(collectionView: collectionView) { (collectionView, indexPath, circuit) -> UICollectionViewCell? in
-            collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: circuit)
+            return cell
         }
     }
     
@@ -93,4 +92,10 @@ class CoursesViewController: UICollectionViewController {
         present(controller, animated: true, completion: nil)
     }
     
+}
+
+extension CoursesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(width: view.frame.width, height: 100)
+    }
 }

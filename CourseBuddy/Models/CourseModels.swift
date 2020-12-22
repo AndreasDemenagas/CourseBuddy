@@ -8,8 +8,8 @@
 import Foundation
 
 enum Level: String, CaseIterable {
-    case hl = "HL"
     case sl = "SL"
+    case hl = "HL"
 }
 
 enum CourseYear: String, CaseIterable {

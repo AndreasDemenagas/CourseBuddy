@@ -23,7 +23,7 @@ struct CourseConfigView: View {
                     .font(.headline)
                 Text("Group \(group.number): \(group.name.rawValue)")
                 Divider()
-                Text("Choose year(s)")
+                Text("Year: \(year.rawValue)")
                 Picker(selection: $year, label: Text("Select year: ")) {
                     ForEach(CourseYear.allCases, id: \.self) { yearOption in
                         Text(yearOption.rawValue)
