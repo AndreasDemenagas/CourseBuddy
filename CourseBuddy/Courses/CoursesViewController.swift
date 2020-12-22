@@ -38,10 +38,8 @@ class CoursesViewController: UICollectionViewController {
         collectionView.backgroundColor = .white
         collectionView.addSubview(noCourseLabel)
         
-        let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Course> { (cell, indexPath, course) in
-            var content = cell.defaultContentConfiguration()
-            content.text = course.name
-            cell.contentConfiguration = content
+        let registration = UICollectionView.CellRegistration<CourseListCell, Course> { (cell, indexPath, course) in
+            cell.course = course
         }
         
         dataSource = UICollectionViewDiffableDataSource<Section, Course>(collectionView: collectionView) { (collectionView, indexPath, circuit) -> UICollectionViewCell? in

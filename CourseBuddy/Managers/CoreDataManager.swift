@@ -42,6 +42,7 @@ class CoreDataManager {
         let course = Course(context: context)
         course.name = title
         course.level = level.rawValue
+        course.courseLevel = level
         
         do {
             try context.save()

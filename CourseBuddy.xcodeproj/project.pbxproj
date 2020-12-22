@@ -21,6 +21,8 @@
 		F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F85B825916992003624E8 /* AddCourseViewController.swift */; };
 		F5A2610725921047000B514B /* CourseConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2610625921047000B514B /* CourseConfigView.swift */; };
 		F5A2610B25921C2E000B514B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2610A25921C2E000B514B /* CoreDataManager.swift */; };
+		F5A2610F25922237000B514B /* CourseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2610E25922237000B514B /* CourseListCell.swift */; };
+		F5A26114259223B6000B514B /* Course+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A26113259223B6000B514B /* Course+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F57F85B825916992003624E8 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		F5A2610625921047000B514B /* CourseConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseConfigView.swift; sourceTree = "<group>"; };
 		F5A2610A25921C2E000B514B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F5A2610E25922237000B514B /* CourseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListCell.swift; sourceTree = "<group>"; };
+		F5A26113259223B6000B514B /* Course+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				F57F858125915A30003624E8 /* SceneDelegate.swift */,
 				F57F859A25915AF4003624E8 /* MainTabBarController.swift */,
 				F57F85A325915F77003624E8 /* Courses */,
+				F5A2611125922240000B514B /* AddCourses */,
 				F5A2610925921C17000B514B /* Managers */,
 				F57F85AC25916455003624E8 /* Models */,
 				F57F859E25915CB6003624E8 /* Constants */,
@@ -100,9 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F57F85A425915F8A003624E8 /* CoursesViewController.swift */,
-				F57F85B825916992003624E8 /* AddCourseViewController.swift */,
-				F57F85B525916922003624E8 /* AddCourseView.swift */,
-				F5A2610625921047000B514B /* CourseConfigView.swift */,
+				F5A2610E25922237000B514B /* CourseListCell.swift */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				F57F85B2259164F1003624E8 /* CourseBank.swift */,
+				F5A26113259223B6000B514B /* Course+Ext.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,6 +133,16 @@
 				F5A2610A25921C2E000B514B /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F5A2611125922240000B514B /* AddCourses */ = {
+			isa = PBXGroup;
+			children = (
+				F5A2610625921047000B514B /* CourseConfigView.swift */,
+				F57F85B525916922003624E8 /* AddCourseView.swift */,
+				F57F85B825916992003624E8 /* AddCourseViewController.swift */,
+			);
+			path = AddCourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,8 +220,10 @@
 				F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */,
 				F57F858025915A30003624E8 /* AppDelegate.swift in Sources */,
 				F57F85AA25916035003624E8 /* Extension_LayoutAnchors.swift in Sources */,
+				F5A26114259223B6000B514B /* Course+Ext.swift in Sources */,
 				F5A2610B25921C2E000B514B /* CoreDataManager.swift in Sources */,
 				F57F859B25915AF4003624E8 /* MainTabBarController.swift in Sources */,
+				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
 				F57F85A525915F8A003624E8 /* CoursesViewController.swift in Sources */,
