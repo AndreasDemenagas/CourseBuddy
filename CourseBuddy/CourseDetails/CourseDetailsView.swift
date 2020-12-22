@@ -52,7 +52,7 @@ struct CourseDetailsView: View {
             }
             
             Section(header: Text("Tasks")) {
-                NavigationLink(destination: Text(course.name!)) {
+                NavigationLink(destination: CourseTasksView(course: $course)) {
                     HStack {
                         Image(systemName: "calendar")
                         Text("View Tasks")

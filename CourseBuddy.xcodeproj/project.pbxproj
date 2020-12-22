@@ -34,6 +34,7 @@
 		F5A2613725925F7B000B514B /* AddAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613625925F7B000B514B /* AddAssessmentView.swift */; };
 		F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613D2592AC96000B514B /* AddTaskView.swift */; };
 		F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261402592B0E7000B514B /* Task+Ext.swift */; };
+		F5A261462592B723000B514B /* CourseTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261452592B723000B514B /* CourseTasksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		F5A2613625925F7B000B514B /* AddAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssessmentView.swift; sourceTree = "<group>"; };
 		F5A2613D2592AC96000B514B /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		F5A261402592B0E7000B514B /* Task+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Ext.swift"; sourceTree = "<group>"; };
+		F5A261452592B723000B514B /* CourseTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTasksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				F5A2613D2592AC96000B514B /* AddTaskView.swift */,
+				F5A261452592B723000B514B /* CourseTasksView.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
+				F5A261462592B723000B514B /* CourseTasksView.swift in Sources */,
 				F57F85A525915F8A003624E8 /* CoursesViewController.swift in Sources */,
 				F5A2611725922BFF000B514B /* CourseModels.swift in Sources */,
 				F57F85B625916922003624E8 /* AddCourseView.swift in Sources */,

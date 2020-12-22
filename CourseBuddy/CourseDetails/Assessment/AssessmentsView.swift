@@ -18,6 +18,7 @@ struct AsssementsView: View {
     var body: some View {
         if(assessments.isEmpty) {
             Text("This course has no assessments.")
+                .bold()
                 .navigationBarTitle("Assessments")
         } else {
             List {

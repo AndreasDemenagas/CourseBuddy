@@ -48,6 +48,15 @@ struct AddTaskView: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .frame(maxHeight: 400)
                 }
+                
+                Button(action: {
+                    self.isPresented = false
+                    self.createAssessment { (course) in
+                        self.course = course
+                    }
+                }, label: {
+                    Text("Create")
+                })
             }
             .navigationBarTitle("Add Task", displayMode: .inline)
             .navigationBarItems(leading: Button(action: {
@@ -55,6 +64,17 @@ struct AddTaskView: View {
             }, label: {
                 Text("Back")
             }))
+        }
+    }
+    
+    func createAssessment(completion: @escaping (Course) -> ()) {
+        CoreDataManager.shared.createCourseTask(for: course, title: taskTitle, isDeliverable: isTaskDeliverable, dueDate: dueDate, priority: taskPriority) { (result) in
+            switch result {
+            case .failure(let error):
+                print("Error ", error )
+            case .success(let course):
+                completion(course)
+            }
         }
     }
 }

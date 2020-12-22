@@ -39,11 +39,36 @@ class CoreDataManager {
         }
     }
     
-    func createAssessment(for course: Course, name: String, gradingType: GradingType, paperType: PaperType, weighting: String, completion: @escaping (Result<Course, Error>) -> ()) {
+    func createCourseTask(for course: Course, title: String, isDeliverable: Bool, dueDate: Date, priority: TaskPriority, completion: @escaping (Result<Course, Error>) -> () ) {
+        
+        let task = CourseTask(context: context)
+        
+        task.course = course
+        
+        task.title = title
+        task.isDeliverable = isDeliverable
+        task.dueDate = dueDate
+        
+        task.priority = priority.rawValue
+        task.courseTaskPriority = priority
+        
+        do {
+            try context.save()
+            completion(.success(course))
+        }
+        
+        catch let error {
+            print("failed to save context....")
+            completion(.failure(error))
+        }
+    }
+    
+    func createAssessment(for course: Course, name: String, gradingType: GradingType, paperType: PaperType, weighting: String, completion: @escaping (Result<Course, Error>) -> () ) {
         
         let assessment = Assessment(context: context)
         
         assessment.course = course
+        
         assessment.name = name
         assessment.weighting = Int32(weighting) ?? 0
         
