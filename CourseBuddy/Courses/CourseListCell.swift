@@ -29,6 +29,8 @@ class CourseListCell: UICollectionViewListCell {
         content.directionalLayoutMargins = .init(top: 20, leading: 0, bottom: 20, trailing: 0)
         content.textProperties.font = UIFont.boldSystemFont(ofSize: 18)
         
+        content.textToSecondaryTextVerticalPadding = 10
+        
         contentConfiguration = content
     }
     

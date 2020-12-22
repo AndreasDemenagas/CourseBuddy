@@ -12,6 +12,7 @@ struct CourseConfigView: View {
     let group: CourseGroup
     
     @State private var level: Level = .sl
+    @State private var year: CourseYear = .both
     
     var dismiss: (() -> ())?
     
@@ -21,17 +22,26 @@ struct CourseConfigView: View {
                 Text("Title: \(course)")
                     .font(.headline)
                 Text("Group \(group.number): \(group.name.rawValue)")
+                Divider()
+                Text("Choose year(s)")
+                Picker(selection: $year, label: Text("Select year: ")) {
+                    ForEach(CourseYear.allCases, id: \.self) { yearOption in
+                        Text(yearOption.rawValue)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                Divider()
+                Text("Level: \(level.rawValue)")
                 Picker(selection: $level, label: Text("Select level: ")) {
                     ForEach(Level.allCases, id: \.self) { level in
                         Text(level.rawValue)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
-                Text("Level: \(level.rawValue)")
                 Divider()
                 Button(action: {
                     print("Adding course: \(course) at level \(level.rawValue)")
-                    self.createCourse(title: course, level: level)
+                    self.createCourse(title: course, level: level, year: year)
                 }, label: {
                     HStack {
                         Spacer()
@@ -53,7 +63,7 @@ struct CourseConfigView: View {
         .navigationBarTitle(course, displayMode: .inline)
     }
     
-    func createCourse(title: String, level: Level) {
+    func createCourse(title: String, level: Level, year: CourseYear) {
         CoreDataManager.shared.createCourse(title: title, level: level) { (result) in
             switch result {
             case .failure(let error):

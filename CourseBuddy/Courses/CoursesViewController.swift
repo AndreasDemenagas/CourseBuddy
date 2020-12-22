@@ -66,6 +66,12 @@ class CoursesViewController: UICollectionViewController {
         populateList(with: courses)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let course = dataSource?.itemIdentifier(for: indexPath) {
+            
+        }
+    }
+    
     private func showNoCoursesLabel() {
         noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
     }

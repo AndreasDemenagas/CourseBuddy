@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum Level: String, CaseIterable {
-    case hl = "HL"
-    case sl = "SL"
-}
-
 struct CourseBank {
     static let groups: [CourseGroup] = [
         CourseGroup(number: 1, name: .language, courses: [
@@ -41,19 +36,4 @@ struct CourseBank {
             "Theatre"
         ])
     ]
-}
-
-struct CourseGroup: Hashable {
-    let number: Int
-    let name: Group
-    let courses: [String]
-    
-    enum Group: String {
-        case language = "Studies in Language and Literature"
-        case acquisition = "Language Acquisition"
-        case humanities = "Individuals and Societies"
-        case sciences = "Experimental Sciences"
-        case maths = "Mathematics"
-        case arts = "The Arts"
-    }
 }

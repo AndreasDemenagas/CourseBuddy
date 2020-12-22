@@ -23,6 +23,7 @@
 		F5A2610B25921C2E000B514B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2610A25921C2E000B514B /* CoreDataManager.swift */; };
 		F5A2610F25922237000B514B /* CourseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2610E25922237000B514B /* CourseListCell.swift */; };
 		F5A26114259223B6000B514B /* Course+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A26113259223B6000B514B /* Course+Ext.swift */; };
+		F5A2611725922BFF000B514B /* CourseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2611625922BFF000B514B /* CourseModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F5A2610A25921C2E000B514B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F5A2610E25922237000B514B /* CourseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListCell.swift; sourceTree = "<group>"; };
 		F5A26113259223B6000B514B /* Course+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Ext.swift"; sourceTree = "<group>"; };
+		F5A2611625922BFF000B514B /* CourseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F57F85B2259164F1003624E8 /* CourseBank.swift */,
+				F5A2611625922BFF000B514B /* CourseModels.swift */,
 				F5A26113259223B6000B514B /* Course+Ext.swift */,
 			);
 			path = Models;
@@ -227,6 +230,7 @@
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
 				F57F85A525915F8A003624E8 /* CoursesViewController.swift in Sources */,
+				F5A2611725922BFF000B514B /* CourseModels.swift in Sources */,
 				F57F85B625916922003624E8 /* AddCourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
