@@ -13,15 +13,48 @@ struct AddTaskView: View {
     
     @Binding var course: Course
     
+    @State private var taskTitle: String = ""
+    @State private var taskPriority: TaskPriority = .medium
+    @State private var isTaskDeliverable = false
+    @State private var dueDate = Date()
+    
     var body: some View {
         NavigationView {
-            Text("AAAA")
-                .navigationBarTitle("Add Task", displayMode: .inline)
-                .navigationBarItems(leading: Button(action: {
-                    self.isPresented = false
-                }, label: {
-                    Text("Back")
-                }))
+            Form {
+                Section(header: Text("Task Title")) {
+                    TextField("Task title", text: $taskTitle)
+                }
+                
+                Section(header: Text("Task Priority")) {
+                    Picker(selection: $taskPriority, label: Text("Select task priority")) {
+                        ForEach(TaskPriority.allCases, id: \.self) { priority in
+                            Text(priority.rawValue)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
+                
+                Section(header: Text("Is Deliverable")) {
+                    Toggle(isOn: $isTaskDeliverable) {
+                        Text("Needs upload files")
+                            .font(.subheadline)
+                    }
+                }
+                
+                Section(header: Text("Due Date")) {
+                    DatePicker(selection: $dueDate, in: Date()..., displayedComponents: .date) {
+                        Text("Select a date")
+                    }
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                    .frame(maxHeight: 400)
+                }
+            }
+            .navigationBarTitle("Add Task", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                self.isPresented = false
+            }, label: {
+                Text("Back")
+            }))
         }
     }
 }
