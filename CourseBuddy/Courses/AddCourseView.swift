@@ -16,7 +16,7 @@ struct AddCourseView: View {
                 ForEach(CourseBank.groups, id: \.self) { group in
                     Section(header: Text(group.name.rawValue)) {
                         ForEach(group.courses, id: \.self) { course in
-                            NavigationLink(destination: CourseConfigView(course: course, group: group)) {
+                            NavigationLink(destination: CourseConfigView(course: course, group: group, dismiss: dismiss)) {
                                 Text(course)
                             }
                         }
@@ -24,6 +24,9 @@ struct AddCourseView: View {
                 }
             }
             .navigationBarTitle("Add Course")
+            .navigationBarItems(trailing: Button(action: dismiss!, label: {
+                Text("Back")
+            }))
             .listStyle(GroupedListStyle())
         }
     }

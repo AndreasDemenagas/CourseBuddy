@@ -19,13 +19,51 @@ class CoursesViewController: UICollectionViewController {
         return label
     }()
     
+    private enum Section {
+        case main
+    }
+    
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Course>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
         collectionView.backgroundColor = .white
         collectionView.addSubview(noCourseLabel)
-        noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
+        //noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
+        
+        setupCollectionView()
+        fetchCourses()
+    }
+    
+    fileprivate func setupCollectionView() {
+        let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Course> { (cell, indexPath, course) in
+            var content = cell.defaultContentConfiguration()
+            content.text = course.name
+            cell.contentConfiguration = content
+        }
+        
+        dataSource = UICollectionViewDiffableDataSource<Section, Course>(collectionView: collectionView) { (collectionView, indexPath, circuit) -> UICollectionViewCell? in
+            collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: circuit)
+        }
+    }
+    
+    func populateList(with circuits: [Course]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Course>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(circuits)
+        dataSource?.apply(snapshot)
+    }
+    
+    private func fetchCourses() {
+        let courses = CoreDataManager.shared.fetchCompanies()
+        populateList(with: courses)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchCourses()
     }
     
     private func setupNavigationBar() {

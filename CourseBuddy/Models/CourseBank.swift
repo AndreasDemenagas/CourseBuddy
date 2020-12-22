@@ -32,8 +32,8 @@ struct CourseBank {
             "Biology"
         ]),
         CourseGroup(number: 5, name: .maths, courses: [
-            "Mathematics: Analysis and Approaches",
-            "Mathematics: Application and Interpretation"
+            "Analysis and Approaches",
+            "Application and Interpretation"
         ]),
         CourseGroup(number: 6, name: .arts, courses: [
             "Film",
