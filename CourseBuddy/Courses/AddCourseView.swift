@@ -11,11 +11,18 @@ struct AddCourseView: View {
     var dismiss: (() -> ())?
     
     var body: some View {
-        VStack {
-            Text("Hello People SwiftUI")
-            Button(action: dismiss!, label: {
-                Text("Add Course")
-            })
+        NavigationView {
+            List {
+                ForEach(CourseBank.groups, id: \.self) { group in
+                    Section(header: Text(group.name.rawValue)) {
+                        ForEach(group.courses, id: \.self) { course in
+                            Text(course)
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Add Course")
+            .listStyle(GroupedListStyle())
         }
     }
 }

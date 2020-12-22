@@ -38,7 +38,7 @@ struct CourseBank {
     ]
 }
 
-struct CourseGroup {
+struct CourseGroup: Hashable {
     let name: Group
     let courses: [String]
     
