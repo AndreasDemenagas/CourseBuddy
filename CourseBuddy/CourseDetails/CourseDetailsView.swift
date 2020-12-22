@@ -9,12 +9,8 @@ import SwiftUI
 
 struct CourseDetailsView: View {
     
-    let course: Course
-    var courseAssessments: [Assessment] {
-        get {
-            self.course.assessments?.allObjects as? [Assessment] ?? []
-        }
-    }
+    @State var course: Course
+    @State private var showingAddAssessmentView = false
     
     var body: some View {
         Form {
@@ -23,12 +19,17 @@ struct CourseDetailsView: View {
             }
             
             Section(header: Text("Assessments")) {
-                NavigationLink(destination: AsssementsView(assessments: courseAssessments)) {
+                NavigationLink(destination: AsssementsView(course: $course)) {
                     HStack {
                         Image(systemName: "pencil")
                         Text("View Assessments")
                     }
                 }
+                Button(action: {
+                    self.showingAddAssessmentView = true
+                }, label: {
+                    Text("Add Assessment")
+                })
             }
             
             Section(header: Text("Units")) {
@@ -58,6 +59,9 @@ struct CourseDetailsView: View {
                     })
                 }
             }
+        }
+        .fullScreenCover(isPresented: $showingAddAssessmentView) {
+            AddAssessmentView(isPresented: $showingAddAssessmentView, course: $course)
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(course.name ?? "", displayMode: .inline)

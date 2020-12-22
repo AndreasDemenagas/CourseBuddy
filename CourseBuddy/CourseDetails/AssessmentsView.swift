@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct AsssementsView: View {
-    let assessments: [Assessment]
+    
+    @Binding var course: Course
+    
+    var assessments: [Assessment] {
+        course.assessments?.allObjects as? [Assessment] ?? []
+    }
+    
     var body: some View {
         if(assessments.isEmpty) {
             Text("This course has no assessments.")

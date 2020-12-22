@@ -39,6 +39,31 @@ class CoreDataManager {
         }
     }
     
+    func createAssessment(for course: Course, name: String, gradingType: GradingType, paperType: PaperType, weighting: String, completion: @escaping (Result<Course, Error>) -> ()) {
+        
+        let assessment = Assessment(context: context)
+        
+        assessment.course = course
+        assessment.name = name
+        assessment.heighting = Int32(weighting) ?? 0
+        
+        assessment.gradingType = gradingType.rawValue
+        assessment.assessmentGradingType = gradingType
+        
+        assessment.paperType = paperType.rawValue
+        assessment.assessmentPaperType = paperType
+        
+        do {
+            try context.save()
+            completion(.success(course))
+        }
+        
+        catch let error {
+            print("failed to save context....")
+            completion(.failure(error))
+        }
+    }
+    
     func createCourse(title: String, level: Level, year: CourseYear, completion: @escaping (Result<Course, Error>) -> ()) {
         let course = Course(context: context)
         course.name = title
@@ -48,13 +73,6 @@ class CoreDataManager {
         
         course.year = year.rawValue
         course.courseYear = year
-        
-        let p1Assessment = Assessment(context: context)
-        p1Assessment.course = course
-        p1Assessment.name = "Paper 1"
-        p1Assessment.gradingType = "External"
-        p1Assessment.heighting = 20
-        p1Assessment.paperType = "Paper"
         
         do {
             try context.save()
