@@ -16,7 +16,9 @@ struct AddCourseView: View {
                 ForEach(CourseBank.groups, id: \.self) { group in
                     Section(header: Text(group.name.rawValue)) {
                         ForEach(group.courses, id: \.self) { course in
-                            Text(course)
+                            NavigationLink(destination: CourseConfigView(course: course, group: group)) {
+                                Text(course)
+                            }
                         }
                     }
                 }

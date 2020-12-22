@@ -7,30 +7,35 @@
 
 import Foundation
 
+enum Level: String, CaseIterable {
+    case hl = "HL"
+    case sl = "SL"
+}
+
 struct CourseBank {
     static let groups: [CourseGroup] = [
-        CourseGroup(name: .language, courses: [
+        CourseGroup(number: 1, name: .language, courses: [
             "English A: Language and Literature",
             "Modern Greek A: Literature"
         ]),
-        CourseGroup(name: .acquisition, courses: [
+        CourseGroup(number: 2, name: .acquisition, courses: [
             "English B"
         ]),
-        CourseGroup(name: .humanities, courses: [
+        CourseGroup(number: 3, name: .humanities, courses: [
             "Business Management",
             "Economics",
             "History"
         ]),
-        CourseGroup(name: .sciences, courses: [
+        CourseGroup(number: 4, name: .sciences, courses: [
             "Physics",
             "Computer Science",
             "Biology"
         ]),
-        CourseGroup(name: .maths, courses: [
+        CourseGroup(number: 5, name: .maths, courses: [
             "Mathematics: Analysis and Approaches",
             "Mathematics: Application and Interpretation"
         ]),
-        CourseGroup(name: .arts, courses: [
+        CourseGroup(number: 6, name: .arts, courses: [
             "Film",
             "Visual Arts",
             "Theatre"
@@ -39,6 +44,7 @@ struct CourseBank {
 }
 
 struct CourseGroup: Hashable {
+    let number: Int
     let name: Group
     let courses: [String]
     
