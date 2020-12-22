@@ -10,7 +10,6 @@ import SwiftUI
 struct CourseDetailsView: View {
     
     let course: Course
-    let sections = CourseSections.sections
     
     var body: some View {
         Form {
@@ -19,16 +18,11 @@ struct CourseDetailsView: View {
             }
             
             Section(header: Text("Assessments")) {
-                NavigationLink(destination: Text(course.name!)) {
+                NavigationLink(destination: AsssementsView(course: course)) {
                     HStack {
                         Image(systemName: "pencil")
                         Text("View Assessments")
                     }
-                }
-                NavigationLink(destination: Text(course.name!)) {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("Add Assessment")
-                    })
                 }
             }
             
@@ -65,29 +59,6 @@ struct CourseDetailsView: View {
     }
 }
 
-//struct CourseDetailsView_Previews: PreviewProvider {
-//    let course = Course.init(context: CoreDataManager.shared.context)
-//    static var previews: some View {
-//        CourseDetailsView(course: course)
-//    }
-//}
 
-//struct CourseDetailsView: View {
-//    let course: Course
-//
-//    let sections = CourseSections.sections
-//
-//    var body: some View {
-//        List {
-//            ForEach(sections) { section in
-//                Section(header: Text(section.header)) {
-//                    ForEach(section.items, id: \.self) { item in
-//                        Text(item.title)
-//                    }
-//                }
-//            }
-//        }
-//        .listStyle(GroupedListStyle())
-//        .navigationBarTitle(course.name ?? "", displayMode: .inline)
-//    }
-//}
+
+
