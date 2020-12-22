@@ -66,4 +66,17 @@ class CoreDataManager {
         }
     }
     
+    func resetCourses() {
+        let context = persistentContainer.viewContext
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: Course.fetchRequest())
+        
+        do {
+            try context.execute(batchDeleteRequest)
+            print("Deleted all Course objects....")
+        }
+        catch {
+            print("Failed to batch delete...")
+        }
+    }
+    
 }

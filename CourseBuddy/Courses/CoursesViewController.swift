@@ -29,15 +29,15 @@ class CoursesViewController: UICollectionViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
-        collectionView.backgroundColor = .white
-        collectionView.addSubview(noCourseLabel)
-        //noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
-        
         setupCollectionView()
+        //CoreDataManager.shared.resetCourses()
         fetchCourses()
     }
     
     fileprivate func setupCollectionView() {
+        collectionView.backgroundColor = .white
+        collectionView.addSubview(noCourseLabel)
+        
         let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Course> { (cell, indexPath, course) in
             var content = cell.defaultContentConfiguration()
             content.text = course.name
@@ -58,7 +58,18 @@ class CoursesViewController: UICollectionViewController {
     
     private func fetchCourses() {
         let courses = CoreDataManager.shared.fetchCompanies()
+        
+        if courses.count == 0 {
+            showNoCoursesLabel()
+            return
+        }
+        
+        noCourseLabel.removeFromSuperview()
         populateList(with: courses)
+    }
+    
+    private func showNoCoursesLabel() {
+        noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
     }
     
     override func viewWillAppear(_ animated: Bool) {
