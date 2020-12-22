@@ -7,16 +7,12 @@
 
 import SwiftUI
 
-enum CourseDetailsViewTypes {
-    case assessment, tasks
-}
-
 struct CourseDetailsView: View {
     
     @State var course: Course
     
-    @State private var showingAddView = false
-    @State private var detailsViewToBePresented: CourseDetailsViewTypes = .assessment
+    @State private var showingAddTaskView = false
+    @State private var showingAddAssessmentView = false
     
     var body: some View {
         Form {
@@ -32,11 +28,13 @@ struct CourseDetailsView: View {
                     }
                 }
                 Button(action: {
-                    self.showingAddView = true
-                    self.detailsViewToBePresented = .assessment
+                    self.showingAddAssessmentView = true
                 }, label: {
                     Text("Add Assessment")
                 })
+                .fullScreenCover(isPresented: $showingAddAssessmentView) {
+                    AddAssessmentView(isPresented: $showingAddAssessmentView, course: $course)
+                }
             }
             
             Section(header: Text("Units")) {
@@ -61,19 +59,13 @@ struct CourseDetailsView: View {
                     }
                 }
                 Button(action: {
-                    self.showingAddView = true
-                    self.detailsViewToBePresented = .tasks
+                    self.showingAddTaskView = true
                 }, label: {
                     Text("Add Tasks")
                 })
-            }
-        }
-        .fullScreenCover(isPresented: $showingAddView) {
-            if self.detailsViewToBePresented == .assessment {
-                AddAssessmentView(isPresented: $showingAddView, course: $course)
-            }
-            else if self.detailsViewToBePresented == .tasks {
-                AddTaskView(isPresented: $showingAddView, course: $course)
+                .fullScreenCover(isPresented: $showingAddTaskView) {
+                    AddTaskView(isPresented: $showingAddTaskView, course: $course)
+                }
             }
         }
         .listStyle(GroupedListStyle())
