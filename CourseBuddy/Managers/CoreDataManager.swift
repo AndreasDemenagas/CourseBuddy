@@ -49,6 +49,13 @@ class CoreDataManager {
         course.year = year.rawValue
         course.courseYear = year
         
+        let p1Assessment = Assessment(context: context)
+        p1Assessment.course = course
+        p1Assessment.name = "Paper 1"
+        p1Assessment.gradingType = "External"
+        p1Assessment.heighting = 20
+        p1Assessment.paperType = "Paper"
+        
         do {
             try context.save()
             completion(.success(course))

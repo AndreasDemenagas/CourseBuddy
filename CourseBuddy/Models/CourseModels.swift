@@ -24,6 +24,7 @@ struct CourseGroup: Hashable {
     let courses: [String]
     
     enum Group: String {
+        case core = "Core Subjects"
         case language = "Studies in Language and Literature"
         case acquisition = "Language Acquisition"
         case humanities = "Individuals and Societies"

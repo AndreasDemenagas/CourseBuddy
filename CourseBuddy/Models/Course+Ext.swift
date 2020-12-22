@@ -26,11 +26,5 @@ extension Course {
             self.year = newValue.rawValue
         }
     }
-    
-    var assessments: [Assessment] {
-        get {
-            return AssessmentsBank.dictionary[self.name!] ?? []
-        }
-    }
 }
 

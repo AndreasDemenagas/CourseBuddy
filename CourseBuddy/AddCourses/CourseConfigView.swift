@@ -21,7 +21,11 @@ struct CourseConfigView: View {
             VStack(alignment: .leading, spacing: 18) {
                 Text("Title: \(course)")
                     .font(.headline)
-                Text("Group \(group.number): \(group.name.rawValue)")
+                if (group.number == 0) {
+                    Text("Core Subject")
+                } else {
+                    Text("Group \(group.number): \(group.name.rawValue)")
+                }
                 Divider()
                 Text("Year: \(year.rawValue)")
                 Picker(selection: $year, label: Text("Select year: ")) {

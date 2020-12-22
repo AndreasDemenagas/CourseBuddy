@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct AsssementsView: View {
-    let course: Course
+    let assessments: [Assessment]
     var body: some View {
-        if(course.assessments.isEmpty) {
+        if(assessments.isEmpty) {
             Text("This course has no assessments.")
                 .navigationBarTitle("Assessments")
         } else {
             List {
-                ForEach(course.assessments, id: \.self) { assessment in
+                ForEach(assessments, id: \.self) { assessment in
                     AssessmentRow(assessment: assessment)
                 }
             }

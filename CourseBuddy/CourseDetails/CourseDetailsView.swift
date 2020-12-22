@@ -10,6 +10,11 @@ import SwiftUI
 struct CourseDetailsView: View {
     
     let course: Course
+    var courseAssessments: [Assessment] {
+        get {
+            self.course.assessments?.allObjects as? [Assessment] ?? []
+        }
+    }
     
     var body: some View {
         Form {
@@ -18,7 +23,7 @@ struct CourseDetailsView: View {
             }
             
             Section(header: Text("Assessments")) {
-                NavigationLink(destination: AsssementsView(course: course)) {
+                NavigationLink(destination: AsssementsView(assessments: courseAssessments)) {
                     HStack {
                         Image(systemName: "pencil")
                         Text("View Assessments")
