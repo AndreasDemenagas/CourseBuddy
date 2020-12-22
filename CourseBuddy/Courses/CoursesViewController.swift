@@ -31,11 +31,17 @@ class CoursesViewController: UICollectionViewController {
         setupNavigationBar()
         setupCollectionView()
         //CoreDataManager.shared.resetCourses()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //TODO: Fetches in every appearance of the view, find a better way (closures, delegates....)
         fetchCourses()
     }
     
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
+        collectionView.alwaysBounceVertical = true
         collectionView.addSubview(noCourseLabel)
         collectionView.register(CourseListCell.self, forCellWithReuseIdentifier: CourseListCell.id)
         
@@ -54,7 +60,7 @@ class CoursesViewController: UICollectionViewController {
     }
     
     private func fetchCourses() {
-        let courses = CoreDataManager.shared.fetchCompanies()
+        let courses = CoreDataManager.shared.fetchCourses()
         
         if courses.count == 0 {
             showNoCoursesLabel()
@@ -67,17 +73,13 @@ class CoursesViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let course = dataSource?.itemIdentifier(for: indexPath) {
-            
+            let detailsController = CourseDetailsController(rootView: CourseDetailsView(course: course))
+            navigationController?.pushViewController(detailsController, animated: true)
         }
     }
     
     private func showNoCoursesLabel() {
         noCourseLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 60, left: 80, bottom: 0, right: 60))
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchCourses()
     }
     
     private func setupNavigationBar() {

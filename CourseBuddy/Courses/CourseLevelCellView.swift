@@ -31,7 +31,7 @@ class CourseLevelCellView: UIView {
         
         backgroundColor = .systemRed
         
-        layer.cornerRadius = 15
+        layer.cornerRadius = 8
         layer.masksToBounds = true
         
         addSubview(label)

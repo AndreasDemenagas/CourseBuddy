@@ -24,7 +24,8 @@ class CoreDataManager {
         return container
     }()
     
-    func fetchCompanies() -> [Course] {
+    func fetchCourses() -> [Course] {
+        print("Fetching")
         let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
         
         do {
@@ -38,11 +39,15 @@ class CoreDataManager {
         }
     }
     
-    func createCourse(title: String, level: Level, completion: @escaping (Result<Course, Error>) -> ()) {
+    func createCourse(title: String, level: Level, year: CourseYear, completion: @escaping (Result<Course, Error>) -> ()) {
         let course = Course(context: context)
         course.name = title
+        
         course.level = level.rawValue
         course.courseLevel = level
+        
+        course.year = year.rawValue
+        course.courseYear = year
         
         do {
             try context.save()

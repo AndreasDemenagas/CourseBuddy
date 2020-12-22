@@ -64,7 +64,7 @@ struct CourseConfigView: View {
     }
     
     func createCourse(title: String, level: Level, year: CourseYear) {
-        CoreDataManager.shared.createCourse(title: title, level: level) { (result) in
+        CoreDataManager.shared.createCourse(title: title, level: level, year: year) { (result) in
             switch result {
             case .failure(let error):
                 print("Error creating course object ", error)

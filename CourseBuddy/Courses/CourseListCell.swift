@@ -72,7 +72,6 @@ class CourseListCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             courseLevelView.widthAnchor.constraint(equalToConstant: 30),
             courseLevelView.heightAnchor.constraint(equalToConstant: 30),
-            courseLevelView.widthAnchor.constraint(equalToConstant: 80),
             stack.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
