@@ -19,7 +19,7 @@ struct AddAssessmentView: View {
     @State private var name: String = ""
     
     var body: some View {
-        VStack {
+        NavigationView {
             Form {
                 Section(header: Text("Name")) {
                     TextField("Assessment name", text: $name)
@@ -57,6 +57,12 @@ struct AddAssessmentView: View {
                     Text("Create")
                 })
             }
+            .navigationBarTitle("Add", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                self.isPresented = false
+            }, label: {
+                Text("Back")
+            }))
         }
     }
     

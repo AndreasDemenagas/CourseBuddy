@@ -170,14 +170,22 @@
 		F5A2611D25923AAD000B514B /* CourseDetails */ = {
 			isa = PBXGroup;
 			children = (
+				F5A261392592A998000B514B /* Assessment */,
 				F5A2611E25923AC1000B514B /* CourseDetailsController.swift */,
 				F5A2612225923AE1000B514B /* CourseDetailsView.swift */,
 				F5A26128259248FF000B514B /* CourseDetailsViewDetailsSection.swift */,
-				F5A2612E25924CB4000B514B /* AssessmentsView.swift */,
-				F5A2613125925148000B514B /* AssessmentRow.swift */,
-				F5A2613625925F7B000B514B /* AddAssessmentView.swift */,
 			);
 			path = CourseDetails;
+			sourceTree = "<group>";
+		};
+		F5A261392592A998000B514B /* Assessment */ = {
+			isa = PBXGroup;
+			children = (
+				F5A2613125925148000B514B /* AssessmentRow.swift */,
+				F5A2612E25924CB4000B514B /* AssessmentsView.swift */,
+				F5A2613625925F7B000B514B /* AddAssessmentView.swift */,
+			);
+			path = Assessment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
