@@ -32,6 +32,7 @@
 		F5A2612F25924CB4000B514B /* AssessmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2612E25924CB4000B514B /* AssessmentsView.swift */; };
 		F5A2613225925148000B514B /* AssessmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613125925148000B514B /* AssessmentRow.swift */; };
 		F5A2613725925F7B000B514B /* AddAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613625925F7B000B514B /* AddAssessmentView.swift */; };
+		F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613D2592AC96000B514B /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F5A2612E25924CB4000B514B /* AssessmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentsView.swift; sourceTree = "<group>"; };
 		F5A2613125925148000B514B /* AssessmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentRow.swift; sourceTree = "<group>"; };
 		F5A2613625925F7B000B514B /* AddAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssessmentView.swift; sourceTree = "<group>"; };
+		F5A2613D2592AC96000B514B /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		F5A2611D25923AAD000B514B /* CourseDetails */ = {
 			isa = PBXGroup;
 			children = (
+				F5A2613B2592ABB7000B514B /* Tasks */,
 				F5A261392592A998000B514B /* Assessment */,
 				F5A2611E25923AC1000B514B /* CourseDetailsController.swift */,
 				F5A2612225923AE1000B514B /* CourseDetailsView.swift */,
@@ -186,6 +189,14 @@
 				F5A2613625925F7B000B514B /* AddAssessmentView.swift */,
 			);
 			path = Assessment;
+			sourceTree = "<group>";
+		};
+		F5A2613B2592ABB7000B514B /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				F5A2613D2592AC96000B514B /* AddTaskView.swift */,
+			);
+			path = Tasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 				F57F85B3259164F1003624E8 /* CourseBank.swift in Sources */,
 				F5A2613225925148000B514B /* AssessmentRow.swift in Sources */,
 				F5A26129259248FF000B514B /* CourseDetailsViewDetailsSection.swift in Sources */,
+				F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */,
 				F57F85A025915CC8003624E8 /* Constants.swift in Sources */,
 				F5A2610725921047000B514B /* CourseConfigView.swift in Sources */,
 				F5A2613725925F7B000B514B /* AddAssessmentView.swift in Sources */,

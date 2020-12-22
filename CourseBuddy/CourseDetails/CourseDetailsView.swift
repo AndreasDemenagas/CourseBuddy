@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+enum ActiveView {
+    case assessment, tasks
+}
+
 struct CourseDetailsView: View {
     
     @State var course: Course
-    @State private var showingAddAssessmentView = false
+    
+    @State private var showingAddView = false
+    @State private var activeSheet: ActiveView = .assessment
     
     var body: some View {
         Form {
@@ -26,7 +32,8 @@ struct CourseDetailsView: View {
                     }
                 }
                 Button(action: {
-                    self.showingAddAssessmentView = true
+                    self.showingAddView = true
+                    self.activeSheet = .assessment
                 }, label: {
                     Text("Add Assessment")
                 })
@@ -53,15 +60,21 @@ struct CourseDetailsView: View {
                         Text("View Tasks")
                     }
                 }
-                NavigationLink(destination: Text(course.name!)) {
-                    Button(action: {}, label: {
-                        Text("Add Tasks")
-                    })
-                }
+                Button(action: {
+                    self.showingAddView = true
+                    self.activeSheet = .tasks
+                }, label: {
+                    Text("Add Tasks")
+                })
             }
         }
-        .fullScreenCover(isPresented: $showingAddAssessmentView) {
-            AddAssessmentView(isPresented: $showingAddAssessmentView, course: $course)
+        .fullScreenCover(isPresented: $showingAddView) {
+            if self.activeSheet == .assessment {
+                AddAssessmentView(isPresented: $showingAddView, course: $course)
+            }
+            else if self.activeSheet == .tasks {
+                AddTaskView(isPresented: $showingAddView)
+            }
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(course.name ?? "", displayMode: .inline)
