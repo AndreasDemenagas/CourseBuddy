@@ -15,7 +15,7 @@
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseTask" inverseName="course" inverseEntity="CourseTask"/>
     </entity>
     <entity name="CourseTask" representedClassName="CourseTask" syncable="YES" codeGenerationType="class">
-        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dueDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isDeliverable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="priority" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
@@ -24,6 +24,6 @@
     <elements>
         <element name="Assessment" positionX="19.2303466796875" positionY="223.1250000000001" width="128" height="118"/>
         <element name="Course" positionX="-82.11224365234375" positionY="-58.76004028320312" width="128" height="118"/>
-        <element name="CourseTask" positionX="-252" positionY="207" width="128" height="118"/>
+        <element name="CourseTask" positionX="-252" positionY="207" width="128" height="104"/>
     </elements>
 </model>

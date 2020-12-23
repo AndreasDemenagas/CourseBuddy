@@ -17,6 +17,8 @@ struct Constants {
         static let casTabBar = "pencil.and.outline"
         
         static let addCourse = "plus.circle.fill"
+        
+        static let deliverableTaskIcon = "doc.badge.plus"
     }
     
     struct Colors {

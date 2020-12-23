@@ -15,6 +15,8 @@ struct AsssementsView: View {
         course.assessments?.allObjects as? [Assessment] ?? []
     }
     
+    @State private var courseAssessments: [Assessment] = []
+    
     var body: some View {
         if(assessments.isEmpty) {
             Text("This course has no assessments.")
@@ -22,11 +24,14 @@ struct AsssementsView: View {
                 .navigationBarTitle("Assessments")
         } else {
             List {
-                ForEach(assessments, id: \.self) { assessment in
+                ForEach(courseAssessments, id: \.self) { assessment in
                     AssessmentRow(assessment: assessment)
                 }
             }
             .navigationBarTitle("Assessments")
+            .onAppear {
+                courseAssessments = self.assessments
+            }
         }
     }
 }

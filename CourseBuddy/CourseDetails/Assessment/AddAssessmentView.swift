@@ -63,6 +63,9 @@ struct AddAssessmentView: View {
             }, label: {
                 Text("Back")
             }))
+            .gesture(DragGesture().onChanged({ (_) in
+                self.hideKeyboard()
+            }))
         }
     }
     

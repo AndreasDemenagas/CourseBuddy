@@ -122,12 +122,29 @@ class CoreDataManager {
         }
     }
     
-    func resetCourses() {
+    func deleteCourseTasks(task: CourseTask) {
+        context.delete(task)
+       
+        do {
+            try context.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+        
+    }
+    
+    func resetCoreDateObjects() {
         let context = persistentContainer.viewContext
+        
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: Course.fetchRequest())
+        let tasksDelete = NSBatchDeleteRequest(fetchRequest: CourseTask.fetchRequest())
+        let assessmentDelete = NSBatchDeleteRequest(fetchRequest: Assessment.fetchRequest())
         
         do {
             try context.execute(batchDeleteRequest)
+            try context.execute(tasksDelete)
+            try context.execute(assessmentDelete)
             print("Deleted all Course objects....")
         }
         catch {

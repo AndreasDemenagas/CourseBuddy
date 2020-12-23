@@ -83,7 +83,7 @@ class CourseListCell: UICollectionViewCell {
     
     private func configureCell(with course: Course) {
         nameLabel.text = course.name
-        detailsLabel.text = course.courseLevel.rawValue
+        detailsLabel.text = course.courseYear.rawValue
         courseLevelView.level = course.courseLevel
     }
     

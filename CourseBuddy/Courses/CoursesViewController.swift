@@ -30,7 +30,7 @@ class CoursesViewController: UICollectionViewController {
         
         setupNavigationBar()
         setupCollectionView()
-        //CoreDataManager.shared.resetCourses()
+        //CoreDataManager.shared.resetCoreDateObjects()
     }
     
     override func viewWillAppear(_ animated: Bool) {

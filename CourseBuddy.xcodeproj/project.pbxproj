@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50321D925937BAA00125235 /* CourseTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50321D825937BAA00125235 /* CourseTaskRow.swift */; };
+		F50321DC2593860500125235 /* Sequence+SortExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50321DB2593860500125235 /* Sequence+SortExt.swift */; };
+		F50321E02593863400125235 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50321DF2593863400125235 /* KeyboardExtension.swift */; };
 		F57F858025915A30003624E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F857F25915A30003624E8 /* AppDelegate.swift */; };
 		F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F858125915A30003624E8 /* SceneDelegate.swift */; };
 		F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F57F858825915A30003624E8 /* CourseBuddy.xcdatamodeld */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F50321D825937BAA00125235 /* CourseTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTaskRow.swift; sourceTree = "<group>"; };
+		F50321DB2593860500125235 /* Sequence+SortExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+SortExt.swift"; sourceTree = "<group>"; };
+		F50321DF2593863400125235 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		F57F857C25915A30003624E8 /* CourseBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57F857F25915A30003624E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57F858125915A30003624E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				F57F85A925916035003624E8 /* Extension_LayoutAnchors.swift */,
+				F50321DB2593860500125235 /* Sequence+SortExt.swift */,
+				F50321DF2593863400125235 /* KeyboardExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 			children = (
 				F5A2613D2592AC96000B514B /* AddTaskView.swift */,
 				F5A261452592B723000B514B /* CourseTasksView.swift */,
+				F50321D825937BAA00125235 /* CourseTaskRow.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 				F5A2611F25923AC1000B514B /* CourseDetailsController.swift in Sources */,
 				F5A2612325923AE1000B514B /* CourseDetailsView.swift in Sources */,
 				F5A2612C259249FF000B514B /* Assessment+Ext.swift in Sources */,
+				F50321D925937BAA00125235 /* CourseTaskRow.swift in Sources */,
 				F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */,
 				F57F858025915A30003624E8 /* AppDelegate.swift in Sources */,
 				F57F85AA25916035003624E8 /* Extension_LayoutAnchors.swift in Sources */,
@@ -301,9 +311,11 @@
 				F57F859B25915AF4003624E8 /* MainTabBarController.swift in Sources */,
 				F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */,
 				F5A2612F25924CB4000B514B /* AssessmentsView.swift in Sources */,
+				F50321E02593863400125235 /* KeyboardExtension.swift in Sources */,
 				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
+				F50321DC2593860500125235 /* Sequence+SortExt.swift in Sources */,
 				F5A261462592B723000B514B /* CourseTasksView.swift in Sources */,
 				F57F85A525915F8A003624E8 /* CoursesViewController.swift in Sources */,
 				F5A2611725922BFF000B514B /* CourseModels.swift in Sources */,
