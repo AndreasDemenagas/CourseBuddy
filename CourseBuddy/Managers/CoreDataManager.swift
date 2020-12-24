@@ -12,6 +12,8 @@ class CoreDataManager {
     
     static let shared = CoreDataManager()
     
+    private init() {}
+    
     lazy var context = persistentContainer.viewContext
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -132,24 +134,6 @@ class CoreDataManager {
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
         
-    }
-    
-    func resetCoreDateObjects() {
-        let context = persistentContainer.viewContext
-        
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: Course.fetchRequest())
-        let tasksDelete = NSBatchDeleteRequest(fetchRequest: CourseTask.fetchRequest())
-        let assessmentDelete = NSBatchDeleteRequest(fetchRequest: Assessment.fetchRequest())
-        
-        do {
-            try context.execute(batchDeleteRequest)
-            try context.execute(tasksDelete)
-            try context.execute(assessmentDelete)
-            print("Deleted all Course objects....")
-        }
-        catch {
-            print("Failed to batch delete...")
-        }
     }
     
 }

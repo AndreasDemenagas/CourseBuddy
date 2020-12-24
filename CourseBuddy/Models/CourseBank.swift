@@ -15,13 +15,15 @@ struct CourseBank {
         ]),
         CourseGroup(number: 1, name: .language, courses: [
             "English A: Language and Literature",
+            "English A: Literature",
             "Modern Greek A: Literature"
         ]),
         CourseGroup(number: 2, name: .acquisition, courses: [
             "English B",
             "French B",
             "Spanish B",
-            "Spanish Ab initio"
+            "Spanish Ab initio",
+            "French Ab initio"
         ]),
         CourseGroup(number: 3, name: .humanities, courses: [
             "Business Management",
