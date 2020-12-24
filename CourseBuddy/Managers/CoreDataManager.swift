@@ -41,6 +41,21 @@ class CoreDataManager {
         }
     }
     
+    func fetchDeadlines() -> [CourseTask] {
+        print("Fetching Deadlines")
+        let fetchRequest = NSFetchRequest<CourseTask>(entityName: "CourseTask")
+        
+        do {
+            let courses = try context.fetch(fetchRequest)
+            return courses
+        }
+        
+        catch {
+            print("Error fetching deadlines")
+            return []
+        }
+    }
+    
     func createCourseTask(for course: Course, title: String, isDeliverable: Bool, dueDate: Date, priority: TaskPriority, completion: @escaping (Result<Course, Error>) -> () ) {
         
         let task = CourseTask(context: context)

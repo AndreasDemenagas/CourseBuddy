@@ -11,6 +11,9 @@
 		F50321DC2593860500125235 /* Sequence+SortExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50321DB2593860500125235 /* Sequence+SortExt.swift */; };
 		F50321E02593863400125235 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50321DF2593863400125235 /* KeyboardExtension.swift */; };
 		F50321E32593919C00125235 /* CoreDataManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50321E22593919C00125235 /* CoreDataManager+Ext.swift */; };
+		F51702E72595560700B54ACE /* DeadlinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51702E62595560700B54ACE /* DeadlinesController.swift */; };
+		F51702EA2595562E00B54ACE /* DeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51702E92595562E00B54ACE /* DeadlinesView.swift */; };
+		F51702ED25955B1700B54ACE /* NoDeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51702EC25955B1700B54ACE /* NoDeadlinesView.swift */; };
 		F57F858025915A30003624E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F857F25915A30003624E8 /* AppDelegate.swift */; };
 		F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F858125915A30003624E8 /* SceneDelegate.swift */; };
 		F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F57F858825915A30003624E8 /* CourseBuddy.xcdatamodeld */; };
@@ -46,6 +49,9 @@
 		F50321DB2593860500125235 /* Sequence+SortExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+SortExt.swift"; sourceTree = "<group>"; };
 		F50321DF2593863400125235 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		F50321E22593919C00125235 /* CoreDataManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Ext.swift"; sourceTree = "<group>"; };
+		F51702E62595560700B54ACE /* DeadlinesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesController.swift; sourceTree = "<group>"; };
+		F51702E92595562E00B54ACE /* DeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesView.swift; sourceTree = "<group>"; };
+		F51702EC25955B1700B54ACE /* NoDeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDeadlinesView.swift; sourceTree = "<group>"; };
 		F57F857C25915A30003624E8 /* CourseBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57F857F25915A30003624E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57F858125915A30003624E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F51702E4259555BC00B54ACE /* Deadlines */ = {
+			isa = PBXGroup;
+			children = (
+				F51702E62595560700B54ACE /* DeadlinesController.swift */,
+				F51702E92595562E00B54ACE /* DeadlinesView.swift */,
+				F51702EC25955B1700B54ACE /* NoDeadlinesView.swift */,
+			);
+			path = Deadlines;
+			sourceTree = "<group>";
+		};
 		F57F857325915A30003624E8 = {
 			isa = PBXGroup;
 			children = (
@@ -111,9 +127,10 @@
 				F57F857F25915A30003624E8 /* AppDelegate.swift */,
 				F57F858125915A30003624E8 /* SceneDelegate.swift */,
 				F57F859A25915AF4003624E8 /* MainTabBarController.swift */,
+				F5A2611125922240000B514B /* AddCourses */,
 				F57F85A325915F77003624E8 /* Courses */,
 				F5A2611D25923AAD000B514B /* CourseDetails */,
-				F5A2611125922240000B514B /* AddCourses */,
+				F51702E4259555BC00B54ACE /* Deadlines */,
 				F5A2610925921C17000B514B /* Managers */,
 				F57F85AC25916455003624E8 /* Models */,
 				F57F859E25915CB6003624E8 /* Constants */,
@@ -309,15 +326,18 @@
 				F57F858025915A30003624E8 /* AppDelegate.swift in Sources */,
 				F57F85AA25916035003624E8 /* Extension_LayoutAnchors.swift in Sources */,
 				F5A26114259223B6000B514B /* Course+Ext.swift in Sources */,
+				F51702ED25955B1700B54ACE /* NoDeadlinesView.swift in Sources */,
 				F5A2610B25921C2E000B514B /* CoreDataManager.swift in Sources */,
 				F5A2611B25923182000B514B /* CourseLevelCellView.swift in Sources */,
 				F57F859B25915AF4003624E8 /* MainTabBarController.swift in Sources */,
+				F51702EA2595562E00B54ACE /* DeadlinesView.swift in Sources */,
 				F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */,
 				F5A2612F25924CB4000B514B /* AssessmentsView.swift in Sources */,
 				F50321E02593863400125235 /* KeyboardExtension.swift in Sources */,
 				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F50321E32593919C00125235 /* CoreDataManager+Ext.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
+				F51702E72595560700B54ACE /* DeadlinesController.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
 				F50321DC2593860500125235 /* Sequence+SortExt.swift in Sources */,
 				F5A261462592B723000B514B /* CourseTasksView.swift in Sources */,
