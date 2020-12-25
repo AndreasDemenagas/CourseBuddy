@@ -28,14 +28,6 @@ extension CourseTask {
             return self.dueDate!
         }
     }
-    
-    static var example: CourseTask {
-        let task = CourseTask(context: CoreDataManager.shared.context)
-        task.title = "Draft Essay V01"
-        task.courseTaskPriority = .medium
-        task.dueDate = Date()
-        task.isDeliverable = true
-        return task
-    }
+
 }
 

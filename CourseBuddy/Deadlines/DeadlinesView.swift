@@ -8,23 +8,17 @@
 import SwiftUI
 
 struct DeadlinesView: View {
-    @State private var tasks: [CourseTask] = []
     
-    var allTasks: [CourseTask] {
-        CoreDataManager.shared.fetchDeadlines()
-    }
+    @FetchRequest(entity: CourseTask.entity(), sortDescriptors: []) var tasks: FetchedResults<CourseTask>
     
     var body: some View {
-        if allTasks.isEmpty {
+        if tasks.isEmpty {
             NoDeadlinesView()
         } else {
             List {
                 ForEach(tasks, id: \.self) { task in
-                    Text(task.title!)
+                    DeadlineRow(deadline: task)
                 }
-            }
-            .onAppear {
-                self.tasks = allTasks
             }
         }
     }

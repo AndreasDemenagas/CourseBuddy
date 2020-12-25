@@ -5,7 +5,7 @@
 //  Created by Andrew Demenagas on 22/12/20.
 //
 
-import UIKit
+import SwiftUI
 
 class MainTabBarController: UITabBarController {
     
@@ -17,21 +17,29 @@ class MainTabBarController: UITabBarController {
         tabBar.barStyle = .black
         tabBar.isTranslucent = false
         
-        let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let coursesController = navigationController(viewController: courseCollectionViewController, imageName: Constants.Images.coursesTabBar, title: "Courses")
-        
-        let deadlinesHostingViewController = DeadlinesController(rootView: DeadlinesView())
-        let deadlinesController = navigationController(viewController: deadlinesHostingViewController, imageName: Constants.Images.calendarTabBar, title: "Deadlines")
-        
         let casController = navigationController(viewController: UIViewController(), imageName: Constants.Images.casTabBar, title: "CAS")
         let groupsController = navigationController(viewController: UIViewController(), imageName: Constants.Images.groupsTabBar, title: "Groups")
         
         viewControllers = [
-            coursesController,
-            deadlinesController,
+            coursesController(),
+            deadlinesController(),
             casController,
             groupsController
         ]
+    }
+    
+    private func deadlinesController() -> UINavigationController {
+        let context = CoreDataManager.shared.context
+        let deadlinesView = DeadlinesView().environment(\.managedObjectContext, context)
+        let deadlinesHostingViewController = UIHostingController(rootView: deadlinesView)
+        let deadlinesController = navigationController(viewController: deadlinesHostingViewController, imageName: Constants.Images.calendarTabBar, title: "Deadlines")
+        return deadlinesController
+    }
+    
+    private func coursesController() -> UINavigationController {
+        let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let coursesController = navigationController(viewController: courseCollectionViewController, imageName: Constants.Images.coursesTabBar, title: "Courses")
+        return coursesController
     }
     
     private func navigationController(viewController: UIViewController, imageName: String, title: String) -> UINavigationController {
