@@ -50,28 +50,12 @@ struct CourseDetailsView: View {
                     })
                 }
             }
-            
-            Section(header: Text("Tasks")) {
-                NavigationLink(destination: CourseTasksView(course: $course)) {
-                    HStack {
-                        Image(systemName: "calendar")
-                        Text("View Tasks")
-                    }
-                }
-                Button(action: {
-                    self.showingAddTaskView = true
-                }, label: {
-                    Text("Add Tasks")
-                })
-                .fullScreenCover(isPresented: $showingAddTaskView) {
-                    AddTaskView(isPresented: $showingAddTaskView, course: $course)
-                }
-            }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle(course.name ?? "", displayMode: .inline)
         }
-        .listStyle(GroupedListStyle())
-        .navigationBarTitle(course.name ?? "", displayMode: .inline)
     }
 }
+
 
 
 

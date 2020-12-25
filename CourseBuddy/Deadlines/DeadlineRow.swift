@@ -24,9 +24,9 @@ struct DeadlineRow: View {
                     Text(deadline.title ?? "")
                         .bold()
                         .font(.title3)
-                    Text("Due: \(deadline.dueDate ?? Date(), formatter: dateFormatter)")
+                    Text("\(getDueTextStart()) \(deadline.dueDate ?? Date(), formatter: dateFormatter)")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(getDueTextColor())
                 }
                 Spacer()
                 Text(getCourseText())
@@ -35,6 +35,20 @@ struct DeadlineRow: View {
             DeadlineRowPriorityView(priority: deadline.courseTaskPriority)
         }
         .padding(.vertical)
+    }
+    
+    func getDueTextStart() -> String {
+        if let dueDate = deadline.dueDate {
+            return Date() < dueDate ? "Due:" : "Overdue:"
+        }
+        return ""
+    }
+    
+    func getDueTextColor() -> Color {
+        if let taskDueDate = deadline.dueDate {
+            return Date() < taskDueDate ? .secondary : .red
+        }
+        return .secondary
     }
     
     func getCourseText() -> String {
