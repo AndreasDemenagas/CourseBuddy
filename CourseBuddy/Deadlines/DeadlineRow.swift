@@ -38,17 +38,11 @@ struct DeadlineRow: View {
     }
     
     func getDueTextStart() -> String {
-        if let dueDate = deadline.dueDate {
-            return Date() < dueDate ? "Due:" : "Overdue:"
-        }
-        return ""
+        return deadline.isOverdue ? "Overdue:" : "Due"
     }
     
     func getDueTextColor() -> Color {
-        if let taskDueDate = deadline.dueDate {
-            return Date() < taskDueDate ? .secondary : .red
-        }
-        return .secondary
+        return deadline.isOverdue ? .red : .secondary
     }
     
     func getCourseText() -> String {

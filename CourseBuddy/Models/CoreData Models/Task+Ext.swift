@@ -28,6 +28,13 @@ extension CourseTask {
             return self.dueDate!
         }
     }
+    
+    var isOverdue: Bool {
+        if let dueDate = self.dueDate {
+            return Date() > dueDate
+        }
+        return false
+    }
 
 }
 
