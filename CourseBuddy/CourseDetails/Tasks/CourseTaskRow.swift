@@ -23,9 +23,9 @@ struct CourseTaskRow: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(task.title!)
                         .font(.headline)
-                    Text("Due: \(task.dueDate!, formatter: dateFormatter)")
+                    Text("\(getDueTextStart()) \(task.dueDate!, formatter: dateFormatter)")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(getDueTextColor())
                 }
                 Text(task.priority!)
                     .bold()
@@ -40,6 +40,14 @@ struct CourseTaskRow: View {
             }
         }
         .padding(.vertical)
+    }
+    
+    func getDueTextStart() -> String {
+        return task.isOverdue ? "Overdue:" : "Due"
+    }
+    
+    func getDueTextColor() -> Color {
+        return task.isOverdue ? .red : .secondary
     }
     
     func priorityColor() -> Color {
