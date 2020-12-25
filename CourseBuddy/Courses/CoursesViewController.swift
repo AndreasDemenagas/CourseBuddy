@@ -40,7 +40,7 @@ class CoursesViewController: UICollectionViewController {
     }
     
     fileprivate func setupCollectionView() {
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.alwaysBounceVertical = true
         collectionView.addSubview(noCourseLabel)
         collectionView.register(CourseListCell.self, forCellWithReuseIdentifier: CourseListCell.id)

@@ -22,7 +22,7 @@ class CourseListCell: UICollectionViewCell {
     
     private let detailsLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .label
+        lbl.textColor = .secondaryLabel
         lbl.font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: 16))
         lbl.numberOfLines = 0
         lbl.lineBreakMode = .byWordWrapping

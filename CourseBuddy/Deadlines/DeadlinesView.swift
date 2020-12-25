@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DeadlinesView: View {
     
-    @FetchRequest(entity: CourseTask.entity(), sortDescriptors: []) var tasks: FetchedResults<CourseTask>
+    @FetchRequest(entity: CourseTask.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \CourseTask.dueDate, ascending: true)
+    ]) var tasks: FetchedResults<CourseTask>
     
     var body: some View {
         if tasks.isEmpty {
