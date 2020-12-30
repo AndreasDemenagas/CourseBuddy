@@ -32,7 +32,7 @@ struct DeadlineRow: View {
                 Text(getCourseText())
             }
             Spacer()
-            DeadlineRowPriorityView(priority: deadline.courseTaskPriority)
+            DeadlineRowPriorityView(priority: deadline.courseTaskPriority) 
         }
         .padding(.vertical)
     }
