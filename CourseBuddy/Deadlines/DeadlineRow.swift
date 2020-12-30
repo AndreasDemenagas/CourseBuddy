@@ -22,7 +22,7 @@ struct DeadlineRow: View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(deadline.title ?? "")
+                    Text(deadline.title ?? "No Deadline Provider")
                         .bold()
                         .font(.title3)
                     Text("\(getDueTextStart()) \(deadline.dueDate ?? Date(), formatter: dateFormatter)")
