@@ -5,6 +5,7 @@
 //  Created by Andrew Demenagas on 25/12/20.
 //
 
+import UIKit
 import SwiftUI
 
 struct DeadlineRow: View {
