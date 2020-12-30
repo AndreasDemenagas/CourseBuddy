@@ -20,7 +20,7 @@ struct DeadlineRow: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 4) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(deadline.title ?? "")
                         .bold()
