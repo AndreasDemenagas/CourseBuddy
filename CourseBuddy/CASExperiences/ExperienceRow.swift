@@ -23,7 +23,7 @@ struct ExperienceRow: View {
             ExperienceViewTypeView(type: experience.experienceType)
             VStack(alignment: .leading, spacing: 0) {
                 Text(experience.name!)
-                    .font(.title3)
+                    .font(.headline)
                     .bold()
                 Text("\(experience.startDate!, formatter: dateFormatter) - \(experience.endDate!, formatter: dateFormatter)")
                     .fontWeight(.light)
