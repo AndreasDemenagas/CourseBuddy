@@ -35,26 +35,18 @@ class MainTabBarController: UITabBarController {
         return deadlinesController
     }
     
-//    private func casController() -> UIViewController {
-//        let context = CoreDataManager.shared.context
-//        let casExperiencesView = ExperiencesNavigationView().environment(\.managedObjectContext, context)
-//        let casHostingController = UIHostingController(rootView: casExperiencesView)
-//        let casController = viewController(viewController: casHostingController, imageName: Constants.Images.casTabBar, title: "CAS")
-//        return casController
-//    }
+    private func casController() -> UIViewController {
+        let context = CoreDataManager.shared.context
+        let casExperiencesView = ExperiencesView().environment(\.managedObjectContext, context)
+        let casHostingController = UIHostingController(rootView: casExperiencesView)
+        let casController = navigationController(viewController: casHostingController, imageName: Constants.Images.casTabBar, title: "CAS")
+        return casController
+    }
     
     private func coursesController() -> UINavigationController {
         let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let coursesController = navigationController(viewController: courseCollectionViewController, imageName: Constants.Images.coursesTabBar, title: "Courses")
         return coursesController
-    }
-    
-    private func viewController(viewController: UIViewController, imageName: String, title: String) -> UIViewController {
-        viewController.navigationItem.title = title
-        viewController.tabBarItem.title = title
-        viewController.navigationController?.navigationBar.prefersLargeTitles = true
-        viewController.tabBarItem.image = UIImage(systemName: imageName)
-        return viewController
     }
     
     private func navigationController(viewController: UIViewController, imageName: String, title: String) -> UINavigationController {

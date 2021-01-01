@@ -16,8 +16,6 @@ extension Course {
         course.courseLevel = .hl
         return course
     }
-    
-    
 }
 
 extension CourseTask {
@@ -30,9 +28,16 @@ extension CourseTask {
         task.isDeliverable = true
         
         task.course = Course.example
-        
         return task
     }
-    
 }
+
+extension CASExperience {
+    static var example: CASExperience {
+        let exp = CASExperience(context: CoreDataManager.shared.context)
+        exp.name = "Book Club"
+        return exp 
+    }
+}
+
 #endif
