@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Assessment" representedClassName="Assessment" syncable="YES" codeGenerationType="class">
         <attribute name="gradingType" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="paperType" optional="YES" attributeType="String"/>
         <attribute name="weighting" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="assessments" inverseEntity="Course"/>
+    </entity>
+    <entity name="CASExperience" representedClassName="CASExperience" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isProject" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="type" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExperienceType" inverseName="experience" inverseEntity="ExperienceType"/>
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="level" optional="YES" attributeType="String"/>
@@ -21,9 +28,15 @@
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="tasks" inverseEntity="Course"/>
     </entity>
+    <entity name="ExperienceType" representedClassName="ExperienceType" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="experience" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CASExperience" inverseName="type" inverseEntity="CASExperience"/>
+    </entity>
     <elements>
         <element name="Assessment" positionX="19.2303466796875" positionY="223.1250000000001" width="128" height="118"/>
         <element name="Course" positionX="-82.11224365234375" positionY="-58.76004028320312" width="128" height="118"/>
         <element name="CourseTask" positionX="-252" positionY="207" width="128" height="104"/>
+        <element name="CASExperience" positionX="-117" positionY="99" width="128" height="104"/>
+        <element name="ExperienceType" positionX="-108" positionY="108" width="128" height="59"/>
     </elements>
 </model>

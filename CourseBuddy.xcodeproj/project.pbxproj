@@ -41,6 +41,7 @@
 		F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2613D2592AC96000B514B /* AddTaskView.swift */; };
 		F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261402592B0E7000B514B /* Task+Ext.swift */; };
 		F5A261462592B723000B514B /* CourseTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261452592B723000B514B /* CourseTasksView.swift */; };
+		F5B9B8CD259F723E0040C8AA /* Experience+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8CC259F723E0040C8AA /* Experience+Ext.swift */; };
 		F5FE14292596290300ACA186 /* DeadlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE14282596290300ACA186 /* DeadlineRow.swift */; };
 		F5FE142C2596293500ACA186 /* Models+Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142B2596293500ACA186 /* Models+Examples.swift */; };
 		F5FE142F259631AA00ACA186 /* DeadlineRowPriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */; };
@@ -83,6 +84,7 @@
 		F5A2613D2592AC96000B514B /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		F5A261402592B0E7000B514B /* Task+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Ext.swift"; sourceTree = "<group>"; };
 		F5A261452592B723000B514B /* CourseTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTasksView.swift; sourceTree = "<group>"; };
+		F5B9B8CC259F723E0040C8AA /* Experience+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Experience+Ext.swift"; sourceTree = "<group>"; };
 		F5FE14282596290300ACA186 /* DeadlineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRow.swift; sourceTree = "<group>"; };
 		F5FE142B2596293500ACA186 /* Models+Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+Examples.swift"; sourceTree = "<group>"; };
 		F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRowPriorityView.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				F5A2612B259249FF000B514B /* Assessment+Ext.swift */,
 				F5A26113259223B6000B514B /* Course+Ext.swift */,
 				F5FE142B2596293500ACA186 /* Models+Examples.swift */,
+				F5B9B8CC259F723E0040C8AA /* Experience+Ext.swift */,
 			);
 			path = "CoreData Models";
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				F50321E02593863400125235 /* KeyboardExtension.swift in Sources */,
 				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F50321E32593919C00125235 /* CoreDataManager+Ext.swift in Sources */,
+				F5B9B8CD259F723E0040C8AA /* Experience+Ext.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
 				F50321DC2593860500125235 /* Sequence+SortExt.swift in Sources */,
