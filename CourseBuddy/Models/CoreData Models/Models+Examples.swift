@@ -36,6 +36,10 @@ extension CASExperience {
     static var example: CASExperience {
         let exp = CASExperience(context: CoreDataManager.shared.context)
         exp.name = "Book Club"
+        exp.type = "Creativity"
+        exp.startDate = Date()
+        exp.isProject = true
+        exp.endDate = Date().addingTimeInterval(86400)
         return exp 
     }
 }

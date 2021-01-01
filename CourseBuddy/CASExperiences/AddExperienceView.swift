@@ -10,7 +10,6 @@ import SwiftUI
 struct AddExperienceView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    //@Environment(\.managedObjectContext) var context
     
     @State private var name = ""
     @State private var type: CASExperienceType = .creativity

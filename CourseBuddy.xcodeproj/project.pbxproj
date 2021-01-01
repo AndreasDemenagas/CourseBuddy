@@ -45,6 +45,9 @@
 		F5B9B8D9259FC3D60040C8AA /* ExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8D8259FC3D60040C8AA /* ExperiencesView.swift */; };
 		F5B9B8DC259FC7D90040C8AA /* AddExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8DB259FC7D90040C8AA /* AddExperienceView.swift */; };
 		F5B9B8E1259FD1F80040C8AA /* CourseBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8DF259FD1F80040C8AA /* CourseBuddy.xcdatamodeld */; };
+		F5B9B8E4259FD9580040C8AA /* ExperienceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8E3259FD9580040C8AA /* ExperienceRow.swift */; };
+		F5B9B8E7259FD9F50040C8AA /* ExperienceRowTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8E6259FD9F50040C8AA /* ExperienceRowTypeView.swift */; };
+		F5B9B8EA259FDC6E0040C8AA /* ExperienceRowProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8E9259FDC6E0040C8AA /* ExperienceRowProjectView.swift */; };
 		F5FE14292596290300ACA186 /* DeadlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE14282596290300ACA186 /* DeadlineRow.swift */; };
 		F5FE142C2596293500ACA186 /* Models+Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142B2596293500ACA186 /* Models+Examples.swift */; };
 		F5FE142F259631AA00ACA186 /* DeadlineRowPriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */; };
@@ -91,6 +94,9 @@
 		F5B9B8D8259FC3D60040C8AA /* ExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesView.swift; sourceTree = "<group>"; };
 		F5B9B8DB259FC7D90040C8AA /* AddExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExperienceView.swift; sourceTree = "<group>"; };
 		F5B9B8E0259FD1F80040C8AA /* CourseBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourseBuddy.xcdatamodel; sourceTree = "<group>"; };
+		F5B9B8E3259FD9580040C8AA /* ExperienceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRow.swift; sourceTree = "<group>"; };
+		F5B9B8E6259FD9F50040C8AA /* ExperienceRowTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRowTypeView.swift; sourceTree = "<group>"; };
+		F5B9B8E9259FDC6E0040C8AA /* ExperienceRowProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRowProjectView.swift; sourceTree = "<group>"; };
 		F5FE14282596290300ACA186 /* DeadlineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRow.swift; sourceTree = "<group>"; };
 		F5FE142B2596293500ACA186 /* Models+Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+Examples.swift"; sourceTree = "<group>"; };
 		F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRowPriorityView.swift; sourceTree = "<group>"; };
@@ -264,6 +270,9 @@
 				F5B9B8D4259F76EC0040C8AA /* NoExperiencesView.swift */,
 				F5B9B8D8259FC3D60040C8AA /* ExperiencesView.swift */,
 				F5B9B8DB259FC7D90040C8AA /* AddExperienceView.swift */,
+				F5B9B8E3259FD9580040C8AA /* ExperienceRow.swift */,
+				F5B9B8E6259FD9F50040C8AA /* ExperienceRowTypeView.swift */,
+				F5B9B8E9259FDC6E0040C8AA /* ExperienceRowProjectView.swift */,
 			);
 			path = CASExperiences;
 			sourceTree = "<group>";
@@ -341,8 +350,11 @@
 				F5B9B8E1259FD1F80040C8AA /* CourseBuddy.xcdatamodeld in Sources */,
 				F5A2613225925148000B514B /* AssessmentRow.swift in Sources */,
 				F5A26129259248FF000B514B /* CourseDetailsViewDetailsSection.swift in Sources */,
+				F5B9B8E7259FD9F50040C8AA /* ExperienceRowTypeView.swift in Sources */,
+				F5B9B8EA259FDC6E0040C8AA /* ExperienceRowProjectView.swift in Sources */,
 				F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */,
 				F57F85A025915CC8003624E8 /* Constants.swift in Sources */,
+				F5B9B8E4259FD9580040C8AA /* ExperienceRow.swift in Sources */,
 				F5FE142F259631AA00ACA186 /* DeadlineRowPriorityView.swift in Sources */,
 				F5A2610725921047000B514B /* CourseConfigView.swift in Sources */,
 				F5A2613725925F7B000B514B /* AddAssessmentView.swift in Sources */,

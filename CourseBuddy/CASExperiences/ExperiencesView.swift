@@ -15,8 +15,6 @@ struct ExperiencesView: View {
     
     @State private var isAddPresented = false
     
-    //var experiences = [CASExperience.example, CASExperience.example, CASExperience.example]
-    
     var body: some View {
         if experiences.isEmpty {
             NoExperiencesView(onButtonClick: {
@@ -30,7 +28,7 @@ struct ExperiencesView: View {
         } else {
             List {
                 ForEach(experiences, id: \.self) { experience in
-                    Text(experience.name!)
+                    ExperienceRow(experience: experience)
                 }
                 .onDelete(perform: deleteActivity)
             }
