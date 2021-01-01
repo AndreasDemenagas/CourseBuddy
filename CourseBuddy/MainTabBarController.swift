@@ -16,14 +16,13 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = Constants.Colors.mainGreen
         tabBar.barStyle = .black
         tabBar.isTranslucent = false
-        
-        let casController = navigationController(viewController: UIViewController(), imageName: Constants.Images.casTabBar, title: "CAS")
+
         let groupsController = navigationController(viewController: UIViewController(), imageName: Constants.Images.groupsTabBar, title: "Groups")
         
         viewControllers = [
             coursesController(),
             deadlinesController(),
-            casController,
+            casController(),
             groupsController
         ]
     }
@@ -36,10 +35,26 @@ class MainTabBarController: UITabBarController {
         return deadlinesController
     }
     
+//    private func casController() -> UIViewController {
+//        let context = CoreDataManager.shared.context
+//        let casExperiencesView = ExperiencesNavigationView().environment(\.managedObjectContext, context)
+//        let casHostingController = UIHostingController(rootView: casExperiencesView)
+//        let casController = viewController(viewController: casHostingController, imageName: Constants.Images.casTabBar, title: "CAS")
+//        return casController
+//    }
+    
     private func coursesController() -> UINavigationController {
         let courseCollectionViewController = CoursesViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let coursesController = navigationController(viewController: courseCollectionViewController, imageName: Constants.Images.coursesTabBar, title: "Courses")
         return coursesController
+    }
+    
+    private func viewController(viewController: UIViewController, imageName: String, title: String) -> UIViewController {
+        viewController.navigationItem.title = title
+        viewController.tabBarItem.title = title
+        viewController.navigationController?.navigationBar.prefersLargeTitles = true
+        viewController.tabBarItem.image = UIImage(systemName: imageName)
+        return viewController
     }
     
     private func navigationController(viewController: UIViewController, imageName: String, title: String) -> UINavigationController {

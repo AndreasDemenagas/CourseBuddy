@@ -42,6 +42,7 @@
 		F5A261412592B0E7000B514B /* Task+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261402592B0E7000B514B /* Task+Ext.swift */; };
 		F5A261462592B723000B514B /* CourseTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A261452592B723000B514B /* CourseTasksView.swift */; };
 		F5B9B8CD259F723E0040C8AA /* Experience+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8CC259F723E0040C8AA /* Experience+Ext.swift */; };
+		F5B9B8D5259F76EC0040C8AA /* NoExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8D4259F76EC0040C8AA /* NoExperiencesView.swift */; };
 		F5FE14292596290300ACA186 /* DeadlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE14282596290300ACA186 /* DeadlineRow.swift */; };
 		F5FE142C2596293500ACA186 /* Models+Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142B2596293500ACA186 /* Models+Examples.swift */; };
 		F5FE142F259631AA00ACA186 /* DeadlineRowPriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */; };
@@ -85,6 +86,7 @@
 		F5A261402592B0E7000B514B /* Task+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Ext.swift"; sourceTree = "<group>"; };
 		F5A261452592B723000B514B /* CourseTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTasksView.swift; sourceTree = "<group>"; };
 		F5B9B8CC259F723E0040C8AA /* Experience+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Experience+Ext.swift"; sourceTree = "<group>"; };
+		F5B9B8D4259F76EC0040C8AA /* NoExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoExperiencesView.swift; sourceTree = "<group>"; };
 		F5FE14282596290300ACA186 /* DeadlineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRow.swift; sourceTree = "<group>"; };
 		F5FE142B2596293500ACA186 /* Models+Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+Examples.swift"; sourceTree = "<group>"; };
 		F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRowPriorityView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				F57F85A325915F77003624E8 /* Courses */,
 				F5A2611D25923AAD000B514B /* CourseDetails */,
 				F51702E4259555BC00B54ACE /* Deadlines */,
+				F5B9B8CF259F74C20040C8AA /* CASExperiences */,
 				F5A2610925921C17000B514B /* Managers */,
 				F57F85AC25916455003624E8 /* Models */,
 				F57F859E25915CB6003624E8 /* Constants */,
@@ -251,6 +254,14 @@
 			path = "CoreData Models";
 			sourceTree = "<group>";
 		};
+		F5B9B8CF259F74C20040C8AA /* CASExperiences */ = {
+			isa = PBXGroup;
+			children = (
+				F5B9B8D4259F76EC0040C8AA /* NoExperiencesView.swift */,
+			);
+			path = CASExperiences;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +359,7 @@
 				F5A2610F25922237000B514B /* CourseListCell.swift in Sources */,
 				F50321E32593919C00125235 /* CoreDataManager+Ext.swift in Sources */,
 				F5B9B8CD259F723E0040C8AA /* Experience+Ext.swift in Sources */,
+				F5B9B8D5259F76EC0040C8AA /* NoExperiencesView.swift in Sources */,
 				F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */,
 				F57F85B925916992003624E8 /* AddCourseViewController.swift in Sources */,
 				F50321DC2593860500125235 /* Sequence+SortExt.swift in Sources */,
