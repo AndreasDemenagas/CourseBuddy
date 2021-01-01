@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ExperiencesView: View {
     
+    @Environment(\.managedObjectContext) var context
+    
     @FetchRequest(entity: CASExperience.entity(), sortDescriptors: []) var experiences: FetchedResults<CASExperience>
     
     @State private var isAddPresented = false
@@ -30,6 +32,7 @@ struct ExperiencesView: View {
                 ForEach(experiences, id: \.self) { experience in
                     Text(experience.name!)
                 }
+                .onDelete(perform: deleteActivity)
             }
             .listStyle(PlainListStyle())
             .navigationBarItems(trailing: Button("Add") {
@@ -38,6 +41,19 @@ struct ExperiencesView: View {
             .fullScreenCover(isPresented: $isAddPresented, content: {
                 AddExperienceView()
             })
+        }
+    }
+    
+    private func deleteActivity(indexSet: IndexSet) {
+        for index in indexSet {
+            let experience = experiences[index]
+            context.delete(experience)
+            
+            do {
+                try context.save()
+            } catch {
+                print("Error deleting experience....")
+            }
         }
     }
 }
