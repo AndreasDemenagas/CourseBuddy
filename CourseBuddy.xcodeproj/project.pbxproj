@@ -15,7 +15,6 @@
 		F51702ED25955B1700B54ACE /* NoDeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51702EC25955B1700B54ACE /* NoDeadlinesView.swift */; };
 		F57F858025915A30003624E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F857F25915A30003624E8 /* AppDelegate.swift */; };
 		F57F858225915A30003624E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F858125915A30003624E8 /* SceneDelegate.swift */; };
-		F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F57F858825915A30003624E8 /* CourseBuddy.xcdatamodeld */; };
 		F57F858C25915A31003624E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57F858B25915A31003624E8 /* Assets.xcassets */; };
 		F57F858F25915A31003624E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57F858D25915A31003624E8 /* LaunchScreen.storyboard */; };
 		F57F859B25915AF4003624E8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57F859A25915AF4003624E8 /* MainTabBarController.swift */; };
@@ -45,6 +44,7 @@
 		F5B9B8D5259F76EC0040C8AA /* NoExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8D4259F76EC0040C8AA /* NoExperiencesView.swift */; };
 		F5B9B8D9259FC3D60040C8AA /* ExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8D8259FC3D60040C8AA /* ExperiencesView.swift */; };
 		F5B9B8DC259FC7D90040C8AA /* AddExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8DB259FC7D90040C8AA /* AddExperienceView.swift */; };
+		F5B9B8E1259FD1F80040C8AA /* CourseBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5B9B8DF259FD1F80040C8AA /* CourseBuddy.xcdatamodeld */; };
 		F5FE14292596290300ACA186 /* DeadlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE14282596290300ACA186 /* DeadlineRow.swift */; };
 		F5FE142C2596293500ACA186 /* Models+Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142B2596293500ACA186 /* Models+Examples.swift */; };
 		F5FE142F259631AA00ACA186 /* DeadlineRowPriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */; };
@@ -60,7 +60,6 @@
 		F57F857C25915A30003624E8 /* CourseBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57F857F25915A30003624E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57F858125915A30003624E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F57F858925915A30003624E8 /* CourseBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourseBuddy.xcdatamodel; sourceTree = "<group>"; };
 		F57F858B25915A31003624E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F57F858E25915A31003624E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F57F859025915A31003624E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		F5B9B8D4259F76EC0040C8AA /* NoExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoExperiencesView.swift; sourceTree = "<group>"; };
 		F5B9B8D8259FC3D60040C8AA /* ExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesView.swift; sourceTree = "<group>"; };
 		F5B9B8DB259FC7D90040C8AA /* AddExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExperienceView.swift; sourceTree = "<group>"; };
+		F5B9B8E0259FD1F80040C8AA /* CourseBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourseBuddy.xcdatamodel; sourceTree = "<group>"; };
 		F5FE14282596290300ACA186 /* DeadlineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRow.swift; sourceTree = "<group>"; };
 		F5FE142B2596293500ACA186 /* Models+Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+Examples.swift"; sourceTree = "<group>"; };
 		F5FE142E259631AA00ACA186 /* DeadlineRowPriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineRowPriorityView.swift; sourceTree = "<group>"; };
@@ -150,9 +150,9 @@
 				F57F859E25915CB6003624E8 /* Constants */,
 				F57F85A825916024003624E8 /* Helpers */,
 				F57F858B25915A31003624E8 /* Assets.xcassets */,
+				F5B9B8DF259FD1F80040C8AA /* CourseBuddy.xcdatamodeld */,
 				F57F858D25915A31003624E8 /* LaunchScreen.storyboard */,
 				F57F859025915A31003624E8 /* Info.plist */,
-				F57F858825915A30003624E8 /* CourseBuddy.xcdatamodeld */,
 			);
 			path = CourseBuddy;
 			sourceTree = "<group>";
@@ -338,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F57F85B3259164F1003624E8 /* CourseBank.swift in Sources */,
+				F5B9B8E1259FD1F80040C8AA /* CourseBuddy.xcdatamodeld in Sources */,
 				F5A2613225925148000B514B /* AssessmentRow.swift in Sources */,
 				F5A26129259248FF000B514B /* CourseDetailsViewDetailsSection.swift in Sources */,
 				F5A2613E2592AC96000B514B /* AddTaskView.swift in Sources */,
@@ -350,7 +351,6 @@
 				F5A2612325923AE1000B514B /* CourseDetailsView.swift in Sources */,
 				F5A2612C259249FF000B514B /* Assessment+Ext.swift in Sources */,
 				F50321D925937BAA00125235 /* CourseTaskRow.swift in Sources */,
-				F57F858A25915A30003624E8 /* CourseBuddy.xcdatamodeld in Sources */,
 				F57F858025915A30003624E8 /* AppDelegate.swift in Sources */,
 				F57F85AA25916035003624E8 /* Extension_LayoutAnchors.swift in Sources */,
 				F5A26114259223B6000B514B /* Course+Ext.swift in Sources */,
@@ -571,12 +571,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F57F858825915A30003624E8 /* CourseBuddy.xcdatamodeld */ = {
+		F5B9B8DF259FD1F80040C8AA /* CourseBuddy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F57F858925915A30003624E8 /* CourseBuddy.xcdatamodel */,
+				F5B9B8E0259FD1F80040C8AA /* CourseBuddy.xcdatamodel */,
 			);
-			currentVersion = F57F858925915A30003624E8 /* CourseBuddy.xcdatamodel */;
+			currentVersion = F5B9B8E0259FD1F80040C8AA /* CourseBuddy.xcdatamodel */;
 			path = CourseBuddy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

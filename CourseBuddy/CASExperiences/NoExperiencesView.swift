@@ -9,13 +9,15 @@ import SwiftUI
 
 struct NoExperiencesView: View {
     
+    var onButtonClick: ( () -> () )
+    
     var body: some View {
         VStack(spacing: 50) {
             Text("You have no added experiences.\nYou can add one using the button below.")
                 .bold()
                 .multilineTextAlignment(.center)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: onButtonClick, label: {
                 Text("Add Experience")
                     .font(.title3)
                     .foregroundColor(.white)
@@ -32,7 +34,9 @@ struct NoExperiencesView: View {
 struct NoExperiencesView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            NoExperiencesView()
+            NoExperiencesView(onButtonClick: {
+                print(12333)
+            })
                 .navigationBarTitle("CAS")
         }
     }

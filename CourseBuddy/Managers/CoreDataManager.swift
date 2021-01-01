@@ -26,6 +26,19 @@ class CoreDataManager {
         return container
     }()
     
+    func createCASExperience(name: String, type: CASExperienceType, start: Date, end: Date, isProject: Bool) {
+        let experience = CASExperience(context: context)
+        experience.name = name
+        experience.endDate = end
+        experience.startDate = start
+        experience.isProject = isProject
+        
+        experience.type = type.rawValue
+        experience.experienceType = type
+        
+        saveContext()
+    }
+    
     func fetchCourses() -> [Course] {
         print("Fetching")
         let fetchRequest = NSFetchRequest<Course>(entityName: "Course")

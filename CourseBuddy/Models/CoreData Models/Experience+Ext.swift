@@ -7,20 +7,20 @@
 
 import Foundation
 
-enum CASExperienceType: String {
+enum CASExperienceType: String, CaseIterable {
     case creativity = "Creativity"
     case activity = "Activity"
     case service = "Service"
 }
 
-extension ExperienceType {
+extension CASExperience {
     var experienceType: CASExperienceType {
         get {
-            return CASExperienceType(rawValue: self.name!)!
+            return CASExperienceType(rawValue: self.type!)!
         }
         
         set {
-            self.name = newValue.rawValue
+            self.type = newValue.rawValue
         }
     }
 }

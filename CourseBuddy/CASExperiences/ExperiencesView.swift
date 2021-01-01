@@ -9,16 +9,22 @@ import SwiftUI
 
 struct ExperiencesView: View {
     
-    //@FetchRequest(entity: CASExperience.entity(), sortDescriptors: []) var experiences: FetchedResults<CASExperience>
+    @FetchRequest(entity: CASExperience.entity(), sortDescriptors: []) var experiences: FetchedResults<CASExperience>
     
     @State private var isAddPresented = false
     
-    var experiences = [CASExperience.example, CASExperience.example, CASExperience.example]
+    //var experiences = [CASExperience.example, CASExperience.example, CASExperience.example]
     
     var body: some View {
         if experiences.isEmpty {
-            NoExperiencesView()
-                .transformEffect(.init(translationX: 0, y: -40))
+            NoExperiencesView(onButtonClick: {
+                self.isAddPresented = true
+                print("Button Clicked...")
+            })
+            .fullScreenCover(isPresented: $isAddPresented, content: {
+                AddExperienceView()
+            })
+            .transformEffect(.init(translationX: 0, y: -40))
         } else {
             List {
                 ForEach(experiences, id: \.self) { experience in
