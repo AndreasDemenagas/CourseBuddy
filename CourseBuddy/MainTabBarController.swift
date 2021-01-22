@@ -16,14 +16,11 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = Constants.Colors.mainGreen
         tabBar.barStyle = .black
         tabBar.isTranslucent = false
-
-        let groupsController = navigationController(viewController: UIViewController(), imageName: Constants.Images.groupsTabBar, title: "Groups")
         
         viewControllers = [
             coursesController(),
             deadlinesController(),
             casController(),
-            groupsController
         ]
     }
     
