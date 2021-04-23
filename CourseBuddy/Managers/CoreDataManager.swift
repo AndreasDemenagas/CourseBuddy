@@ -40,7 +40,6 @@ class CoreDataManager {
     }
     
     func fetchCourses() -> [Course] {
-        print("Fetching")
         let fetchRequest = NSFetchRequest<Course>(entityName: "Course")
         
         do {
